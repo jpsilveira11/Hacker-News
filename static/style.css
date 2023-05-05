@@ -12,7 +12,11 @@ body {
 .container {
     margin: 30px auto auto auto;
     width: 65%;
-    border: 3px solid green;
+    border: 3px solid transparent;
+    /*
+    border: 3px solid rgb(0, 22, 0);
+    border-radius: 8px;
+    */
     padding: 10px;
 }
 .header {
@@ -32,12 +36,7 @@ a {
     text-decoration: none;
 }
 .filter{
-    /*
-    margin: 30px auto auto auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-    */
+    text-align: center;
     color:greenyellow;
 }
 
