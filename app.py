@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask,render_template
+
 
 app = Flask('Hacker News')
 
 @app.route('/')
 def start():
-    return '<h1><center>working!</center></h1>'
+    return render_template('home.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
