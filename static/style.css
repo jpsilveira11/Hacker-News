@@ -5,6 +5,8 @@
     font-family:'poppins',sans-serif;
 }
 
+/*----------------------------------------------------------------*/
+
 body {
     background-color: black;
 }
@@ -12,13 +14,36 @@ body {
 .container {
     margin: 30px auto auto auto;
     width: 65%;
-    border: 3px solid transparent;
     /*
+    border: 3px solid transparent;
+    */
     border: 3px solid rgb(0, 22, 0);
     border-radius: 8px;
-    */
+    
     padding: 10px;
 }
+/*
+.searchbar-container{
+    margin: 30px auto auto auto;
+    width: 20%;
+    //comment
+    border: 3px solid transparent;
+    //end of comment
+    border: 3px solid rgb(0, 22, 0);
+    border-radius: 8px;
+    
+    padding: 10px;
+}
+*/
+
+
+a {
+    color:azure;
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------*/
+
 .header {
     color:greenyellow;
     padding:none; 
@@ -31,10 +56,49 @@ body {
     text-align: center;
     font-weight: lighter;
 }
-a {
-    color:azure;
-    text-decoration: none;
+
+/*----------------------------------------------------------------*/
+
+.searchbar{
+    width:100%;
+    /*max-width: 100%;*/
+    display:inline-flex;
 }
+.searchbar-input{
+    flex-grow:1;
+    padding:10px;
+    outline:none;
+    border:1px solid #009578;
+    border-radius: 15px 0 0 15px;
+    background: #F4FAF9;
+    transition: background 0.25s, box-shadow 0.25s;
+}
+.searchbar-input:focus{
+    background-color: white;
+    box-shadow: 0 0 2px #8CC6BA;
+}
+.searchbar-input::placeholder{
+    color:#8CC6BA;
+}
+.searchbar-button{
+    width:40px;
+    background:#009578;
+    color:white;
+    outline: none;
+    border:none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 15px 15px 0;
+    cursor:pointer;
+    user-select: none;
+}
+.searchbar-button:active{
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.25);
+}
+
+/*----------------------------------------------------------------*/
+
 .filter{
     text-align: center;
     color:greenyellow;

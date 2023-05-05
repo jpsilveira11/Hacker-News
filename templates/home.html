@@ -5,16 +5,25 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
+    <!---->
     <body>
+        <!---->
         <div class="container">
             <div class="header">
                 <h1 id="header-h1">Hacker News</h1>
                 <h5 id="header-h5">Powered by <a href="https://hn.algolia.com/api/">Hacker News API</a></h5>
             </div>
         </div>
-
+        <!---->
+        <div class="container">
+            <form class="searchbar">
+                <input class="searchbar-input" type="text" name="search" placeholder="Search...">
+                <button class="searchbar-button" type="submit"><i class='bx bx-search'></i></button>
+            </form>
+        </div>
+        <!---->
         <div class="container">
             <div class="filter">
                 Search by:  
