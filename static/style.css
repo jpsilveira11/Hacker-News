@@ -9,7 +9,7 @@
 
 body {
     background-color: black;
-    color:greenyellow;
+    color:#009578;
 }
 a {
     color:azure;
@@ -132,7 +132,7 @@ hr{
     margin:15px;
 }
 .news-title{
-    color:#009578;
+    color:greenyellow;
 }
 /*----------------------------------------------------------------*/
 .footer {
