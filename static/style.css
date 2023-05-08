@@ -9,6 +9,11 @@
 
 body {
     background-color: black;
+    color:greenyellow;
+}
+a {
+    color:azure;
+    text-decoration: none;
 }
 
 .container {
@@ -16,22 +21,15 @@ body {
     width: 65%;
     /*
     border: 3px solid transparent;
-    */
+    
     border: 3px solid rgb(0, 22, 0);
     border-radius: 8px;
-    
+    */
     padding: 10px;
 }
-
-a {
-    color:azure;
-    text-decoration: none;
-}
-
 /*----------------------------------------------------------------*/
 
 .header {
-    color:greenyellow;
     padding:none; 
 }
 #header-h1{
@@ -96,7 +94,6 @@ a {
 
 .filter{
     text-align: center;
-    color:greenyellow;
     font-size: 1vw;
 }
 
@@ -123,14 +120,11 @@ a {
     background:#006B56;
 }
 /*----------------------------------------------------------------*/
+hr{
+    color: rgba(50, 50, 50, 0.25);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
 /*----------------------------------------------------------------*/
 .footer {
-    color:greenyellow;
-    font-size: 1vw;
-}
-#author {
-    float: left;
-}
-#source {
-    float: right;
+    font-size: .9vw;
 }
