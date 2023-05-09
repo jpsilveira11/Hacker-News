@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="EN-us">
+    <head>
+        <title>Hacker News</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <!---->
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1 id="header-h1"><a href="/" style="color:inherit">Hacker News</a></h1>
+                <h5 id="header-h5">Powered by <a href="https://hn.algolia.com/api/">HN Search API</a></h5>
+            </div>
+        </div>
+    <!---->
+    <hr>
+    <!---->
+    <div class="container">
+        <div id="news-title">
+            <h2>{{data.title}}</h2>
+        </div>
+        <h5 id="news-source">From <a href="{{data.url}}">{{data.url}}</a></h5>
+        {%set date=data.created_at %}
+        {%set date=date[:date.index('T')] %}
+        <h6 id="news-author"><i class='bx bxs-user-rectangle' ></i> {{data.author}} | <i class='bx bx-calendar-event'></i> {{date}} | <i class='bx bx-upvote'></i> {{data.points}}</h6>
+    </div>
+    <!---->
+    <div class="container">
+        <div id="comments-header">
+            <h2>Comments:</h2>
+        </div>
+        <div class="comments-block">
+            {% for child in data.children %}
+            <div class="comment">
+                <h3>{{child.author}}</h3>
+                {%set date=data.created_at %}
+                {%set date=date[:date.index('T')] %}
+                <h6><i class='bx bx-calendar-event'></i>{{date}}</h6>
+                <div class="comment-content">
+                    {% autoescape false %}
+                    {{child.text}}
+                    {% endautoescape %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        </div>
+    </div>
+    <!---->
+    <div class="container">
+        <div class="footer">
+        This is just a academic project made by <a href="https://github.com/jpsilveira11">João Pedro Espechit Silveira</a>.<br>
+        Visit the original page <a href="https://hn.algolia.com/">HERE</a>.
+        </div>
+    </div>
+    </body>

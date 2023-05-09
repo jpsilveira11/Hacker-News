@@ -50,6 +50,18 @@ hr{
     font-weight: lighter;
     font-size: 1vw;
 }
+#news-title{
+    color:greenyellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5vw;
+}
+#news-source{
+    text-align:center;
+}
+#news-author{
+    text-align:center;
+}
 
 /*----------------------------------------------------------------*/
 
@@ -133,6 +145,19 @@ hr{
 }
 .news-title{
     color:greenyellow;
+    font-weight: bolder;
+}
+.news-source{
+    font-weight: lighter;
+    text-decoration:underline azure;
+}
+#comments-header{
+    font-weight: bold;
+    margin: 15px;
+}
+.comment-content{
+    color:whitesmoke;
+    margin-bottom: 15px;
 }
 /*----------------------------------------------------------------*/
 .footer {

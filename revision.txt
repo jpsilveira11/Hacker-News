@@ -1,0 +1,11 @@
+{% for c in child %}
+                <div class="reply">
+                    <h3>{{child.author}}</h3>
+                    {%set date=data.created_at %}
+                    {%set date=date[:date.index('T')] %}
+                    <h6><i class='bx bx-calendar-event'></i>{{date}}</h6>
+                    <div class="reply-content">
+                        {% autoescape false %}
+                        {{child.text}}
+                        {% endautoescape %}
+                
