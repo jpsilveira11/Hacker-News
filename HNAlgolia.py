@@ -29,7 +29,7 @@ def search_news(keywords,by_radio): #for_radio
     else:
         by='search'
 
-    print(f'Keywords: {keywords} | By: {by_radio} -> {by}')
+    #print(f'Keywords: {keywords} | By: {by_radio} -> {by}')
 
     url = f'http://hn.algolia.com/api/v1/{by}'
     querystring = {"query":keywords,"tags":"story","hitsPerPage":"100"}
