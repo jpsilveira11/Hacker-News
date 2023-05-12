@@ -1,5 +1,5 @@
-from flask import Flask,render_template
-from HNAlgolia import default_news,get_news
+from flask import Flask,render_template,request
+from HNAlgolia import default_news,get_news,search_news
 
 
 app = Flask('Hacker News')
@@ -10,11 +10,18 @@ def start():
     data=response.json()
     return render_template('home.html',data=data)
 
-'''
-@app.route('/search')
+
+@app.route('/search',methods=['GET'])
 def search():
-    return render_template('search.html')
-    '''
+
+    keywords=request.args.get('keywords')
+    by=request.args.get('by')
+    response=search_news(keywords,by)
+    data=response.json()
+    
+    return render_template('search.html',data=data,keywords=keywords,by=by)
+    #return 'Keywords: {} | Filter By: {}'.format(keywords,by)
+
 
 @app.route('/news&id=<id>')
 def build_news(id):

@@ -29,9 +29,9 @@
                     <div class="radio-box">
                         Search by:
                         <div class="by">
-                            <input class="radio-input" type="radio" id="popularity" name="by" value="popularity">
+                            <input class="radio-input" type="radio" id="popularity" name="by" value="popularity" {% if request.args.get('by') == 'popularity' %}checked{% endif %}>
                             <label class="radio-label" for="popularity">Popularity</label>
-                            <input class="radio-input" type="radio" id="date" name="by" value="date">
+                            <input class="radio-input" type="radio" id="date" name="by" value="date" {% if request.args.get('by') == 'date' %}checked{% endif %}>
                             <label class="radio-label" for="date">Date</label>
                         </div>
                     </div>
