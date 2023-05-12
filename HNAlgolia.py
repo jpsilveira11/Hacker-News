@@ -24,10 +24,12 @@ def search_news(keywords,by_radio): #for_radio
     if timestamp is 'all-time':
         pass
     '''
-    if by_radio is 'date':
+    if by_radio == 'date':
         by='search_by_date'
     else:
         by='search'
+
+    print(f'Keywords: {keywords} | By: {by_radio} -> {by}')
 
     url = f'http://hn.algolia.com/api/v1/{by}'
     querystring = {"query":keywords,"tags":"story","hitsPerPage":"100"}

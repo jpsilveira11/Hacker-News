@@ -22,7 +22,7 @@
             <div class="form-box">
                 <form class="search" method="GET" action="/search">
                     <div class="search-box">
-                        <input class="searchbar-input" type="text" name="keywords" placeholder="Search...">
+                        <input class="searchbar-input" type="text" name="keywords" placeholder="Search..." value="{{request.args.get('keywords')}}">
                         <button class="searchbar-button" type="submit"><i class='bx bx-search'></i></button>    
                     </div>
                     <br>

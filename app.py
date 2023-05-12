@@ -20,7 +20,7 @@ def search():
     data=response.json()
     
     return render_template('search.html',data=data,keywords=keywords,by=by)
-    #return 'Keywords: {} | Filter By: {}'.format(keywords,by)
+    #return f'Keywords: {keywords} | Filter By: {by}'
 
 
 @app.route('/news&id=<id>')
